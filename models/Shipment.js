@@ -21,9 +21,9 @@ const shipmentSchema = mongoose.Schema({
     creator_id: {type: String, required: true}, // database id of the user that created the shipment
     parcels: {type: [parcelSchema], required: true}, // also at least one parcel is required
     technical_id: {type: String, required: false}, // database id of the shipment
-    ref_1: {type: String, required: false}, // database id of the parcel
-    ref_2: {type: String, required: false}, // database id of the parcel
-    ref_3: {type: String, required: false}, // database id of the parcel
+    ref_1: {type: String, required: false}, // business id1 of the parcel
+    ref_2: {type: String, required: false}, // business id2 of the parcel
+    ref_3: {type: String, required: false}, // business id3 of the parcel
     sender_address: {type: addressSchema, required: true},
     receiver_adress: {type: addressSchema, required: true},
     service: {type: String, required: false} // TODO {type: serviceSchema, required: false}
